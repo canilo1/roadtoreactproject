@@ -2,7 +2,7 @@ import * as React from 'react';
 function getTitle(title){
   return title;
 }
-const ToDoList  = [{id:1,title:[],key:id,title:}]
+const ToDoList  = [{id:1,title:[{}]}]
 
 function App(){
   return (
