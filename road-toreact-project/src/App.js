@@ -8,15 +8,13 @@ function getTitle(title){
   return title;
 }
 function App(){
-  const [newTodo, setNewTodo] = useState('');
-  
-
+  const [newTodo, setNewTodo] = useState(''); 
   return (
    <div>
     <h1>ToDoList</h1>
   <ToDoList />
-<p>{newTodo}</p>
-  <AddToForm />
+  <AddToForm onAddTodo  = {setNewTodo} />
+  <p>{newTodo}</p>
    </div>
 
   );
