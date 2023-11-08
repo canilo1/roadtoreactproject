@@ -1,8 +1,6 @@
 import React from "react";
 
-const ToDoListItem = (props) => {
-  console.log("This is props", props);
-  console.log("This is props.todo", props.todo);
+const ToDoListItem = (props) => {  
   return <li>{props.todo.title}</li>;
 };
 
