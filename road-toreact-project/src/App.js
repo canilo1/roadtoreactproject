@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+<<<<<<< Updated upstream
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,25 @@ function App() {
         </a>
       </header>
     </div>
+=======
+import * as React from 'react';
+import ToDoList from './TodoList';
+import AddToForm  from './AddTodoForm';
+import { useState } from "react";
+function App(){
+  const[todoList,setTodoList] =useState([])
+  function addTodo(newTodo){
+    setTodoList([...todoList,newTodo])
+  }
+
+  return (
+   <div>
+    <h1>ToDoList</h1>
+  <ToDoList todoList = {todoList} />
+  <AddToForm onAddTodo  = {addTodo} />
+   </div>
+
+>>>>>>> Stashed changes
   );
 }
 
