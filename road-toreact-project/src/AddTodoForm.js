@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddToForm({addTo}) {
+function AddToForm({onAddTodo}) {
   const [todoTitle, setTodoTitle] = useState('');
 
   // Function to handle changes in the input field
@@ -18,7 +18,7 @@ function AddToForm({addTo}) {
       id: Date.now(), // Placeholder for generating a unique identifier
     };
 
-    addTo.onAddTodo(newTodo);
+   onAddTodo(newTodo);
 
     // Clear the todoTitle state by setting it to an empty string
     setTodoTitle('');
@@ -27,7 +27,6 @@ function AddToForm({addTo}) {
   return (
     <form onSubmit={handleAddTodo}>
       <label htmlFor="todoTitle">Title</label>
-      <input type="text" name="title" id="todoTitle" />
       <input
         type="text"
         name="title"
